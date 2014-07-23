@@ -1,0 +1,5 @@
+run post/windows/manage/migrate 
+run getcountermeasure
+run killav
+run checkvm
+#run scraper

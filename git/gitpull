@@ -1,0 +1,23 @@
+#!/bin/bash
+
+gitreset () {
+git reset --hard HEAD
+git clean -f -d
+git pull
+}
+
+projet () {
+echo --------
+pwd
+echo --------
+}
+
+for i in $(ls)
+do
+	if [ -d $i ] ;then
+	cd $i
+        projet
+	gitreset
+	cd ..
+	fi
+done

